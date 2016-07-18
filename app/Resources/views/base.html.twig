@@ -34,8 +34,14 @@
               </button>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">S'enregistrer</a></li>
-              <li><a href="#">Se connecter</a></li>
+              {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li><a href="#">Bonjour {{ app.user.username }}</a></li>
+                <li><a href="{{ path('fos_user_security_logout')}}">Se déconnecter</a></li>
+              {% else %}
+                <li><a href="{{ path('fos_user_registration_register')}}">S'enregistrer</a></li>
+                <li><a href="{{ path('fos_user_security_login')}}">Se connecter</a></li>
+              {% endif %}
+
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

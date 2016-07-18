@@ -16,8 +16,8 @@ class __TwigTemplate_54c59aae57b1d0d87b762ea6fddfcf892087673caba1ec0dfb51e07b6ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2648d593de8a367cbe79427012cbc3df5f5bd336c496d1c978ef87ba5f07215c = $this->env->getExtension("native_profiler");
-        $__internal_2648d593de8a367cbe79427012cbc3df5f5bd336c496d1c978ef87ba5f07215c->enter($__internal_2648d593de8a367cbe79427012cbc3df5f5bd336c496d1c978ef87ba5f07215c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
+        $__internal_3bdf423dd6dd3f3b162e34d91d1d8060bc3633dc0ba3e890badf962b49e29104 = $this->env->getExtension("native_profiler");
+        $__internal_3bdf423dd6dd3f3b162e34d91d1d8060bc3633dc0ba3e890badf962b49e29104->enter($__internal_3bdf423dd6dd3f3b162e34d91d1d8060bc3633dc0ba3e890badf962b49e29104_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -74,17 +74,40 @@ class __TwigTemplate_54c59aae57b1d0d87b762ea6fddfcf892087673caba1ec0dfb51e07b6ff
               </button>
             </ul>
             <ul class=\"nav navbar-nav navbar-right\">
-              <li><a href=\"#\">S'enregistrer</a></li>
-              <li><a href=\"#\">Se connecter</a></li>
+              ";
+        // line 37
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 38
+            echo "                <li><a href=\"#\">Bonjour ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+            echo "</a></li>
+                <li><a href=\"";
+            // line 39
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
+            echo "\">Se déconnecter</a></li>
+              ";
+        } else {
+            // line 41
+            echo "                <li><a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
+            echo "\">S'enregistrer</a></li>
+                <li><a href=\"";
+            // line 42
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
+            echo "\">Se connecter</a></li>
+              ";
+        }
+        // line 44
+        echo "
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
 
       ";
-        // line 44
+        // line 50
         $this->displayBlock('body', $context, $blocks);
-        // line 47
+        // line 53
         echo "
       <div class=\"col-md-12 empty\">
       
@@ -117,11 +140,11 @@ class __TwigTemplate_54c59aae57b1d0d87b762ea6fddfcf892087673caba1ec0dfb51e07b6ff
               <p>L'exercice se découpe en 2 parties.</p>
 
               <p>- l'intégration (HTML / CSS) d'une page \"article\" <a href=\"";
-        // line 78
+        // line 84
         echo $this->env->getExtension('routing')->getPath("article_show");
         echo "\"><strong>ici</strong></a></p>
               <p>- l'intégration d'une fonctionnalité de commentaires sur la fiche d'un film (la réponse aux commentaires est falcultative).<strong> Tu devras d'abord ajouter un film dans la BDD <a href=\"";
-        // line 79
+        // line 85
         echo $this->env->getExtension('routing')->getPath("admin_film_new");
         echo "\">ici </strong></a> ! </p>
 
@@ -138,21 +161,21 @@ class __TwigTemplate_54c59aae57b1d0d87b762ea6fddfcf892087673caba1ec0dfb51e07b6ff
 </html>
 ";
         
-        $__internal_2648d593de8a367cbe79427012cbc3df5f5bd336c496d1c978ef87ba5f07215c->leave($__internal_2648d593de8a367cbe79427012cbc3df5f5bd336c496d1c978ef87ba5f07215c_prof);
+        $__internal_3bdf423dd6dd3f3b162e34d91d1d8060bc3633dc0ba3e890badf962b49e29104->leave($__internal_3bdf423dd6dd3f3b162e34d91d1d8060bc3633dc0ba3e890badf962b49e29104_prof);
 
     }
 
-    // line 44
+    // line 50
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e88e3147db74ce3e2c49e4b301ca6db75098f424a39b86ab12586086618569cc = $this->env->getExtension("native_profiler");
-        $__internal_e88e3147db74ce3e2c49e4b301ca6db75098f424a39b86ab12586086618569cc->enter($__internal_e88e3147db74ce3e2c49e4b301ca6db75098f424a39b86ab12586086618569cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_da45b3c0e6c4ac6951f3302ba6781e9fc1948d4538f1060e299e55f6882caaf2 = $this->env->getExtension("native_profiler");
+        $__internal_da45b3c0e6c4ac6951f3302ba6781e9fc1948d4538f1060e299e55f6882caaf2->enter($__internal_da45b3c0e6c4ac6951f3302ba6781e9fc1948d4538f1060e299e55f6882caaf2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 45
+        // line 51
         echo "
       ";
         
-        $__internal_e88e3147db74ce3e2c49e4b301ca6db75098f424a39b86ab12586086618569cc->leave($__internal_e88e3147db74ce3e2c49e4b301ca6db75098f424a39b86ab12586086618569cc_prof);
+        $__internal_da45b3c0e6c4ac6951f3302ba6781e9fc1948d4538f1060e299e55f6882caaf2->leave($__internal_da45b3c0e6c4ac6951f3302ba6781e9fc1948d4538f1060e299e55f6882caaf2_prof);
 
     }
 
@@ -168,7 +191,7 @@ class __TwigTemplate_54c59aae57b1d0d87b762ea6fddfcf892087673caba1ec0dfb51e07b6ff
 
     public function getDebugInfo()
     {
-        return array (  152 => 45,  146 => 44,  125 => 79,  121 => 78,  88 => 47,  86 => 44,  51 => 12,  47 => 11,  43 => 10,  38 => 8,  34 => 7,  30 => 6,  23 => 1,);
+        return array (  175 => 51,  169 => 50,  148 => 85,  144 => 84,  111 => 53,  109 => 50,  101 => 44,  96 => 42,  91 => 41,  86 => 39,  81 => 38,  79 => 37,  51 => 12,  47 => 11,  43 => 10,  38 => 8,  34 => 7,  30 => 6,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -207,8 +230,14 @@ class __TwigTemplate_54c59aae57b1d0d87b762ea6fddfcf892087673caba1ec0dfb51e07b6ff
 /*               </button>*/
 /*             </ul>*/
 /*             <ul class="nav navbar-nav navbar-right">*/
-/*               <li><a href="#">S'enregistrer</a></li>*/
-/*               <li><a href="#">Se connecter</a></li>*/
+/*               {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
+/*                 <li><a href="#">Bonjour {{ app.user.username }}</a></li>*/
+/*                 <li><a href="{{ path('fos_user_security_logout')}}">Se déconnecter</a></li>*/
+/*               {% else %}*/
+/*                 <li><a href="{{ path('fos_user_registration_register')}}">S'enregistrer</a></li>*/
+/*                 <li><a href="{{ path('fos_user_security_login')}}">Se connecter</a></li>*/
+/*               {% endif %}*/
+/* */
 /*             </ul>*/
 /*           </div><!-- /.navbar-collapse -->*/
 /*         </div><!-- /.container-fluid -->*/

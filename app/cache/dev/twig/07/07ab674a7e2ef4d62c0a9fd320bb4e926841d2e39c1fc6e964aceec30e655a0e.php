@@ -21,42 +21,96 @@ class __TwigTemplate_27a6b22d3a5faa4c26b64a9a62ccc648318399b9c30e1fe924cc312b721
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f7cdf4f6afee3c6dd9a0d23f8ceff7e6a2371508b7950b1bce96797fd3ba7289 = $this->env->getExtension("native_profiler");
-        $__internal_f7cdf4f6afee3c6dd9a0d23f8ceff7e6a2371508b7950b1bce96797fd3ba7289->enter($__internal_f7cdf4f6afee3c6dd9a0d23f8ceff7e6a2371508b7950b1bce96797fd3ba7289_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontendBundle:Default:newfilm.html.twig"));
+        $__internal_1a2213b4bd644166a97b8b6f5a78bce2a2e36b75c1a41998a0eb869031535866 = $this->env->getExtension("native_profiler");
+        $__internal_1a2213b4bd644166a97b8b6f5a78bce2a2e36b75c1a41998a0eb869031535866->enter($__internal_1a2213b4bd644166a97b8b6f5a78bce2a2e36b75c1a41998a0eb869031535866_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontendBundle:Default:newfilm.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f7cdf4f6afee3c6dd9a0d23f8ceff7e6a2371508b7950b1bce96797fd3ba7289->leave($__internal_f7cdf4f6afee3c6dd9a0d23f8ceff7e6a2371508b7950b1bce96797fd3ba7289_prof);
+        $__internal_1a2213b4bd644166a97b8b6f5a78bce2a2e36b75c1a41998a0eb869031535866->leave($__internal_1a2213b4bd644166a97b8b6f5a78bce2a2e36b75c1a41998a0eb869031535866_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e2f09a6c2b082abcff02dfef6ccb4ec8c359c2a9064d4cafbfe2a67ce24989a0 = $this->env->getExtension("native_profiler");
-        $__internal_e2f09a6c2b082abcff02dfef6ccb4ec8c359c2a9064d4cafbfe2a67ce24989a0->enter($__internal_e2f09a6c2b082abcff02dfef6ccb4ec8c359c2a9064d4cafbfe2a67ce24989a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c1aa884f8f1e56d9363a1dc0b5f1042839c7bd05a5f5c974120d7ebf19a8a7b0 = $this->env->getExtension("native_profiler");
+        $__internal_c1aa884f8f1e56d9363a1dc0b5f1042839c7bd05a5f5c974120d7ebf19a8a7b0->enter($__internal_c1aa884f8f1e56d9363a1dc0b5f1042839c7bd05a5f5c974120d7ebf19a8a7b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
-<h1>Ajoutez un nouveau film</h1>
+<div class=\"col-md-6 col-md-offset-3 form-new\">
+\t
+\t<div class=\"col-md-12\">
+\t\t<h1>Ajoutez un nouveau film</h1>
+\t\t<hr>
+\t</div>
 
-";
-        // line 7
+\t";
+        // line 12
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
-\t";
-        // line 8
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+\t\t<div class=\"col-md-12\">
+\t\t\t";
+        // line 14
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "titre", array()), 'label');
         echo "
-\t<input type=\"submit\">
-";
-        // line 10
+\t\t</div>
+\t\t<div class=\"col-md-12\">
+\t\t\t";
+        // line 17
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "titre", array()), 'widget');
+        echo "
+\t\t</div>
+\t\t<div class=\"col-md-12\">
+\t\t\t";
+        // line 20
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'label');
+        echo "
+\t\t</div>
+\t\t<div class=\"col-md-12\">
+\t\t\t";
+        // line 23
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'widget');
+        echo "
+\t\t</div>
+\t\t<div class=\"col-md-12\">
+\t\t\t";
+        // line 26
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "parution", array()), 'label');
+        echo "
+\t\t</div>
+\t\t<div class=\"col-md-12\">
+\t\t\t";
+        // line 29
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "parution", array()), 'widget');
+        echo "
+\t\t</div>
+\t\t<div class=\"col-md-12\">
+\t\t\t";
+        // line 32
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "folder", array()), 'label');
+        echo "
+\t\t</div>
+\t\t<div class=\"col-md-12\">
+\t\t\t";
+        // line 35
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "folder", array()), 'widget');
+        echo "
+\t\t</div>
+\t\t<div class=\"col-md-12\">
+\t\t\t<hr>
+\t\t\t<input type=\"submit\">
+\t\t</div>
+
+\t";
+        // line 42
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
+</div>
 
 ";
         
-        $__internal_e2f09a6c2b082abcff02dfef6ccb4ec8c359c2a9064d4cafbfe2a67ce24989a0->leave($__internal_e2f09a6c2b082abcff02dfef6ccb4ec8c359c2a9064d4cafbfe2a67ce24989a0_prof);
+        $__internal_c1aa884f8f1e56d9363a1dc0b5f1042839c7bd05a5f5c974120d7ebf19a8a7b0->leave($__internal_c1aa884f8f1e56d9363a1dc0b5f1042839c7bd05a5f5c974120d7ebf19a8a7b0_prof);
 
     }
 
@@ -72,18 +126,51 @@ class __TwigTemplate_27a6b22d3a5faa4c26b64a9a62ccc648318399b9c30e1fe924cc312b721
 
     public function getDebugInfo()
     {
-        return array (  54 => 10,  49 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  107 => 42,  97 => 35,  91 => 32,  85 => 29,  79 => 26,  73 => 23,  67 => 20,  61 => 17,  55 => 14,  50 => 12,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
 /* */
 /* {% block body %}*/
 /* */
-/* <h1>Ajoutez un nouveau film</h1>*/
+/* <div class="col-md-6 col-md-offset-3 form-new">*/
+/* 	*/
+/* 	<div class="col-md-12">*/
+/* 		<h1>Ajoutez un nouveau film</h1>*/
+/* 		<hr>*/
+/* 	</div>*/
 /* */
-/* {{ form_start(form) }}*/
-/* 	{{ form_widget(form) }}*/
-/* 	<input type="submit">*/
-/* {{ form_end(form) }}*/
+/* 	{{ form_start(form) }}*/
+/* 		<div class="col-md-12">*/
+/* 			{{ form_label(form.titre) }}*/
+/* 		</div>*/
+/* 		<div class="col-md-12">*/
+/* 			{{ form_widget(form.titre) }}*/
+/* 		</div>*/
+/* 		<div class="col-md-12">*/
+/* 			{{ form_label(form.description) }}*/
+/* 		</div>*/
+/* 		<div class="col-md-12">*/
+/* 			{{ form_widget(form.description) }}*/
+/* 		</div>*/
+/* 		<div class="col-md-12">*/
+/* 			{{ form_label(form.parution) }}*/
+/* 		</div>*/
+/* 		<div class="col-md-12">*/
+/* 			{{ form_widget(form.parution) }}*/
+/* 		</div>*/
+/* 		<div class="col-md-12">*/
+/* 			{{ form_label(form.folder) }}*/
+/* 		</div>*/
+/* 		<div class="col-md-12">*/
+/* 			{{ form_widget(form.folder) }}*/
+/* 		</div>*/
+/* 		<div class="col-md-12">*/
+/* 			<hr>*/
+/* 			<input type="submit">*/
+/* 		</div>*/
+/* */
+/* 	{{ form_end(form) }}*/
+/* </div>*/
 /* */
 /* {% endblock %} */

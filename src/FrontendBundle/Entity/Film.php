@@ -31,9 +31,9 @@ class Film
     /**
      * @var string
      *
-     * @ORM\Column(name="auteur", type="string", length=255, nullable=true)
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
-    private $auteur;
+    private $description;
 
     /**
      * @var \DateTime
@@ -41,20 +41,6 @@ class Film
      * @ORM\Column(name="parution", type="date", nullable=true)
      */
     private $parution;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="acteur", type="string", length=255, nullable=true)
-     */
-    private $acteur;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="genre", type="string", length=255, nullable=true)
-     */
-    private $genre;
 
     /**
      * @var string
@@ -98,26 +84,26 @@ class Film
     }
 
     /**
-     * Set auteur
+     * Set description
      *
-     * @param string $auteur
+     * @param string $description
      * @return Film
      */
-    public function setAuteur($auteur)
+    public function setDescription($description)
     {
-        $this->auteur = $auteur;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get auteur
+     * Get description
      *
      * @return string 
      */
-    public function getAuteur()
+    public function getDescription()
     {
-        return $this->auteur;
+        return $this->description;
     }
 
     /**
@@ -141,52 +127,6 @@ class Film
     public function getParution()
     {
         return $this->parution;
-    }
-
-    /**
-     * Set acteur
-     *
-     * @param string $acteur
-     * @return Film
-     */
-    public function setActeur($acteur)
-    {
-        $this->acteur = $acteur;
-
-        return $this;
-    }
-
-    /**
-     * Get acteur
-     *
-     * @return string 
-     */
-    public function getActeur()
-    {
-        return $this->acteur;
-    }
-
-    /**
-     * Set genre
-     *
-     * @param string $genre
-     * @return Film
-     */
-    public function setGenre($genre)
-    {
-        $this->genre = $genre;
-
-        return $this;
-    }
-
-    /**
-     * Get genre
-     *
-     * @return string 
-     */
-    public function getGenre()
-    {
-        return $this->genre;
     }
 
     /**

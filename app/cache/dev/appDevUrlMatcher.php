@@ -114,15 +114,20 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'FrontendBundle\\Controller\\DefaultController::indexAction',  '_route' => 'frontend_homepage',);
         }
 
-        if (0 === strpos($pathinfo, '/film')) {
-            // film_show
-            if (0 === strpos($pathinfo, '/film/show') && preg_match('#^/film/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'film_show')), array (  '_controller' => 'FrontendBundle\\Controller\\DefaultController::showAction',));
+        // film_show
+        if (0 === strpos($pathinfo, '/film/show') && preg_match('#^/film/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'film_show')), array (  '_controller' => 'FrontendBundle\\Controller\\DefaultController::showAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/a')) {
+            // article_show
+            if ($pathinfo === '/article') {
+                return array (  '_controller' => 'FrontendBundle\\Controller\\DefaultController::articleAction',  '_route' => 'article_show',);
             }
 
-            // film_new
-            if ($pathinfo === '/film/new') {
-                return array (  '_controller' => 'FrontendBundle\\Controller\\DefaultController::newFilmAction',  '_route' => 'film_new',);
+            // admin_film_new
+            if ($pathinfo === '/admin/film/new') {
+                return array (  '_controller' => 'FrontendBundle\\Controller\\DefaultController::newFilmAction',  '_route' => 'admin_film_new',);
             }
 
         }

@@ -21,45 +21,56 @@ class __TwigTemplate_f6a317ca4f97d8c494e75dc23948c17c289d2c3b02778a235969fb62a10
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_33689f3961ee318a59d99aeb61c844c934a43d892b7547ac7f9ee3630576c227 = $this->env->getExtension("native_profiler");
-        $__internal_33689f3961ee318a59d99aeb61c844c934a43d892b7547ac7f9ee3630576c227->enter($__internal_33689f3961ee318a59d99aeb61c844c934a43d892b7547ac7f9ee3630576c227_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontendBundle:Default:show.html.twig"));
+        $__internal_f7253fb86e2667592cbcecb9e130a8d182cecc8e84d4aa3d6c257f75056a3cca = $this->env->getExtension("native_profiler");
+        $__internal_f7253fb86e2667592cbcecb9e130a8d182cecc8e84d4aa3d6c257f75056a3cca->enter($__internal_f7253fb86e2667592cbcecb9e130a8d182cecc8e84d4aa3d6c257f75056a3cca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontendBundle:Default:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_33689f3961ee318a59d99aeb61c844c934a43d892b7547ac7f9ee3630576c227->leave($__internal_33689f3961ee318a59d99aeb61c844c934a43d892b7547ac7f9ee3630576c227_prof);
+        $__internal_f7253fb86e2667592cbcecb9e130a8d182cecc8e84d4aa3d6c257f75056a3cca->leave($__internal_f7253fb86e2667592cbcecb9e130a8d182cecc8e84d4aa3d6c257f75056a3cca_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_5db13cfe1ee424ad119d2096102fe29076e0d4b06c9980917b2fd50121f8211c = $this->env->getExtension("native_profiler");
-        $__internal_5db13cfe1ee424ad119d2096102fe29076e0d4b06c9980917b2fd50121f8211c->enter($__internal_5db13cfe1ee424ad119d2096102fe29076e0d4b06c9980917b2fd50121f8211c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_397e0e14b401426f5acd6acdd070f833e5bc17fe6f0ae61bf525132f9ac5faca = $this->env->getExtension("native_profiler");
+        $__internal_397e0e14b401426f5acd6acdd070f833e5bc17fe6f0ae61bf525132f9ac5faca->enter($__internal_397e0e14b401426f5acd6acdd070f833e5bc17fe6f0ae61bf525132f9ac5faca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "
-\t<div class=\"col-md-5 col-md-offset-1\">
-\t\t<div class=\"col-md-12\">
-\t\t\t<img src=\"";
-        // line 7
+        echo "\t<div class=\"col-md-12\">
+\t\t<div class=\"col-md-5 col-md-offset-1 left\">
+\t\t\t<img class=\"img-style-3\" src=\"";
+        // line 6
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl((("uploads/film/" . $this->getAttribute((isset($context["movie"]) ? $context["movie"] : $this->getContext($context, "movie")), "folder", array())) . "")), "html", null, true);
         echo "\">
 \t\t</div>
-\t</div>
-\t<div class=\"col-md-5\">
+\t\t<div class=\"col-md-5\">
 
-\t\t<h1>";
-        // line 12
+\t\t\t<h2>";
+        // line 10
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["movie"]) ? $context["movie"] : $this->getContext($context, "movie")), "titre", array()), "html", null, true);
-        echo "</h1>
-\t\t<hr>
-\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-\t\t
+        echo "</h2>
+\t\t\t<hr>
+\t\t\t<p>";
+        // line 12
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["movie"]) ? $context["movie"] : $this->getContext($context, "movie")), "description", array()), "html", null, true);
+        echo "</p>
+\t\t\t
+\t\t</div>
+\t</div>
+\t<div class=\"col-md-10 col-md-offset-1\">
+\t\t<div class=\"col-md-12\">
+\t\t\t<h2>Commentaires : </h2>
+\t\t\t<hr>
+
+\t\t\t";
+        // line 22
+        echo "\t\t</div>
 \t</div>
 
 ";
         
-        $__internal_5db13cfe1ee424ad119d2096102fe29076e0d4b06c9980917b2fd50121f8211c->leave($__internal_5db13cfe1ee424ad119d2096102fe29076e0d4b06c9980917b2fd50121f8211c_prof);
+        $__internal_397e0e14b401426f5acd6acdd070f833e5bc17fe6f0ae61bf525132f9ac5faca->leave($__internal_397e0e14b401426f5acd6acdd070f833e5bc17fe6f0ae61bf525132f9ac5faca_prof);
 
     }
 
@@ -75,24 +86,31 @@ class __TwigTemplate_f6a317ca4f97d8c494e75dc23948c17c289d2c3b02778a235969fb62a10
 
     public function getDebugInfo()
     {
-        return array (  53 => 12,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  68 => 22,  56 => 12,  51 => 10,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
 /* */
 /* {% block body %}*/
+/* 	<div class="col-md-12">*/
+/* 		<div class="col-md-5 col-md-offset-1 left">*/
+/* 			<img class="img-style-3" src="{{ asset('uploads/film/' ~ movie.folder ~ '') }}">*/
+/* 		</div>*/
+/* 		<div class="col-md-5">*/
 /* */
-/* 	<div class="col-md-5 col-md-offset-1">*/
-/* 		<div class="col-md-12">*/
-/* 			<img src="{{ asset('uploads/film/' ~ movie.folder ~ '') }}">*/
+/* 			<h2>{{ movie.titre }}</h2>*/
+/* 			<hr>*/
+/* 			<p>{{ movie.description }}</p>*/
+/* 			*/
 /* 		</div>*/
 /* 	</div>*/
-/* 	<div class="col-md-5">*/
+/* 	<div class="col-md-10 col-md-offset-1">*/
+/* 		<div class="col-md-12">*/
+/* 			<h2>Commentaires : </h2>*/
+/* 			<hr>*/
 /* */
-/* 		<h1>{{ movie.titre }}</h1>*/
-/* 		<hr>*/
-/* 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>*/
-/* 		*/
+/* 			{# CODE HERE #}*/
+/* 		</div>*/
 /* 	</div>*/
 /* */
 /* {% endblock %}*/

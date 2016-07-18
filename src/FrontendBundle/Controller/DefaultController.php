@@ -48,6 +48,14 @@ class DefaultController extends Controller
         ));
     }
 
+    public function articleAction()
+    {
+    	$em = $this->getDoctrine()->getManager();
+        $user = $this->container->get('security.context')->getToken()->getUser();
+		
+		return $this->render('FrontendBundle:Default:article.html.twig');
+    }
+
     public function showAction($id)
     {
     	$em = $this->getDoctrine()->getManager();

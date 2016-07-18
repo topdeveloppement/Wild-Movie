@@ -14,10 +14,8 @@ class FilmType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('auteur')
+            ->add('description')
             ->add('parution')
-            ->add('acteur')
-            ->add('genre')
             ->add('folder', FileType::class, array('label' => 'Folder (jpg file)'))
         ;
     }

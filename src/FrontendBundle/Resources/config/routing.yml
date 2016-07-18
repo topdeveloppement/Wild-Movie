@@ -6,6 +6,10 @@ film_show:
     path:     /film/show/{id}
     defaults: { _controller: FrontendBundle:Default:show }
 
-film_new:
-    path:     /film/new
+article_show:
+    path:     /article
+    defaults: { _controller: FrontendBundle:Default:article }
+
+admin_film_new:
+    path:     /admin/film/new
     defaults: { _controller: FrontendBundle:Default:newFilm }

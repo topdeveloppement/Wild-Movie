@@ -21,20 +21,20 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb = $this->env->getExtension("native_profiler");
-        $__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb->enter($__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontendBundle:Default:index.html.twig"));
+        $__internal_6ac53363ff3e023d2bf257d4cd0c3b7dfbc9d494fcf39562ae9ad3544eb723c7 = $this->env->getExtension("native_profiler");
+        $__internal_6ac53363ff3e023d2bf257d4cd0c3b7dfbc9d494fcf39562ae9ad3544eb723c7->enter($__internal_6ac53363ff3e023d2bf257d4cd0c3b7dfbc9d494fcf39562ae9ad3544eb723c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontendBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb->leave($__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb_prof);
+        $__internal_6ac53363ff3e023d2bf257d4cd0c3b7dfbc9d494fcf39562ae9ad3544eb723c7->leave($__internal_6ac53363ff3e023d2bf257d4cd0c3b7dfbc9d494fcf39562ae9ad3544eb723c7_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a = $this->env->getExtension("native_profiler");
-        $__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a->enter($__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_fe7991372c6a8fcb23c2e9fdc5469b534ec783600059a3a01918976ed214fc91 = $this->env->getExtension("native_profiler");
+        $__internal_fe7991372c6a8fcb23c2e9fdc5469b534ec783600059a3a01918976ed214fc91->enter($__internal_fe7991372c6a8fcb23c2e9fdc5469b534ec783600059a3a01918976ed214fc91_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -54,12 +54,11 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/photo1.jpg"), "html", null, true);
         echo "\" alt=\"Chania\">
 \t\t    </div>
-
 \t\t    <div class=\"item\">
-\t\t      <img style=\"max-height:300px;\" src=\"";
-        // line 20
+\t\t      <img class=\"img-style-1\" src=\"";
+        // line 19
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/photo1.jpg"), "html", null, true);
-        echo "\" alt=\"Flower\">
+        echo "\" alt=\"Chania\">
 \t\t    </div>
 \t\t  </div>
 
@@ -80,41 +79,52 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 \t\t<hr>
 
 \t\t";
-        // line 40
+        // line 39
         $context["compteur"] = 0;
-        // line 41
+        // line 40
         echo "
 \t\t";
-        // line 42
+        // line 41
+        if (twig_test_empty((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")))) {
+            // line 42
+            echo "\t\t\t<h3>Ajouter un film en base de donnée pour continuer <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("admin_film_new");
+            echo "\">ici</a> !</h3>
+\t\t";
+        }
+        // line 44
+        echo "
+\t\t";
+        // line 45
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")));
         foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
-            // line 43
+            // line 46
             echo "\t\t\t";
             if (((isset($context["compteur"]) ? $context["compteur"] : $this->getContext($context, "compteur")) != 5)) {
-                // line 44
+                // line 47
                 echo "\t\t\t\t<div class=\"col-md-4\">
 \t\t\t\t\t<a href=\"";
-                // line 45
+                // line 48
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("film_show", array("id" => $this->getAttribute($context["movie"], "id", array()))), "html", null, true);
                 echo "\"><img class=\"card-img-top img-style-2\" src=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl((("uploads/film/" . $this->getAttribute($context["movie"], "folder", array())) . "")), "html", null, true);
-                echo "\" alt=\"film\">
+                echo "\" alt=\"film\"></a>
 \t\t\t\t</div>
 \t\t\t\t";
-                // line 47
+                // line 50
                 $context["compteur"] = ((isset($context["compteur"]) ? $context["compteur"] : $this->getContext($context, "compteur")) + 1);
-                // line 48
+                // line 51
                 echo "\t\t\t";
             }
-            // line 49
+            // line 52
             echo "
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 54
         echo "
 \t</div>
 
@@ -126,16 +136,16 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 \t\t\t<p><strong>Décès de l’homme qui connaissait le mec qui était le cousin du type qui était pote avec Jean Dujardin...</strong></h3>
 \t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
 \t\t</div>
-\t\t<div class=\"col-md-12 article-style-2\">
+\t\t<div class=\"col-md-12 article-style-1\">
 \t\t\t<p><strong>Un chaton aurait trouvé refuge dans la gorge du chanteur Garou depuis 1983...</strong></h3>
 \t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
 \t\t</div>
-\t\t<div class=\"col-md-12 article-style-2\">
-\t\t\t<p><strong>Fabrice Luchini sombre dans la dépression après avoir commis une faute de liaison...</strong></h3>
+\t\t<div class=\"col-md-12 article-style-1\">
+\t\t\t<p><strong>Éric et Ramzy forcés de re-tourner leur film après avoir oublié le cache de l’objectif sur la caméra</strong></h3>
 \t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
 \t\t</div>
-\t\t<div class=\"col-md-12 article-style-2\">
-\t\t\t<p><strong>Kanye West frappe une jeune fan qui ne chante pas assez fort à son goût...</strong></h3>
+\t\t<div class=\"col-md-12 article-style-1\">
+\t\t\t<p><strong>Fan de Star Wars, il dépense 200.000 euros pour ressembler à un sabre laser</strong></h3>
 \t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
 \t\t</div>
 \t\t
@@ -143,7 +153,7 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 
 ";
         
-        $__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a->leave($__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a_prof);
+        $__internal_fe7991372c6a8fcb23c2e9fdc5469b534ec783600059a3a01918976ed214fc91->leave($__internal_fe7991372c6a8fcb23c2e9fdc5469b534ec783600059a3a01918976ed214fc91_prof);
 
     }
 
@@ -159,7 +169,7 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 
     public function getDebugInfo()
     {
-        return array (  118 => 51,  111 => 49,  108 => 48,  106 => 47,  99 => 45,  96 => 44,  93 => 43,  89 => 42,  86 => 41,  84 => 40,  61 => 20,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  128 => 54,  121 => 52,  118 => 51,  116 => 50,  109 => 48,  106 => 47,  103 => 46,  99 => 45,  96 => 44,  90 => 42,  88 => 41,  85 => 40,  83 => 39,  60 => 19,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
@@ -179,9 +189,8 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 /* 		    <div class="item active">*/
 /* 		      <img class="img-style-1" src="{{ asset('img/photo1.jpg') }}" alt="Chania">*/
 /* 		    </div>*/
-/* */
 /* 		    <div class="item">*/
-/* 		      <img style="max-height:300px;" src="{{ asset('img/photo1.jpg') }}" alt="Flower">*/
+/* 		      <img class="img-style-1" src="{{ asset('img/photo1.jpg') }}" alt="Chania">*/
 /* 		    </div>*/
 /* 		  </div>*/
 /* */
@@ -203,10 +212,14 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 /* */
 /* 		{% set compteur = 0 %}*/
 /* */
+/* 		{% if movies is empty %}*/
+/* 			<h3>Ajouter un film en base de donnée pour continuer <a href="{{ path('admin_film_new') }}">ici</a> !</h3>*/
+/* 		{% endif %}*/
+/* */
 /* 		{% for movie in movies %}*/
 /* 			{% if compteur != 5 %}*/
 /* 				<div class="col-md-4">*/
-/* 					<a href="{{ path('film_show', {'id': movie.id}) }}"><img class="card-img-top img-style-2" src="{{ asset('uploads/film/' ~ movie.folder ~ '') }}" alt="film">*/
+/* 					<a href="{{ path('film_show', {'id': movie.id}) }}"><img class="card-img-top img-style-2" src="{{ asset('uploads/film/' ~ movie.folder ~ '') }}" alt="film"></a>*/
 /* 				</div>*/
 /* 				{% set compteur = compteur + 1 %}*/
 /* 			{% endif %}*/
@@ -223,16 +236,16 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 /* 			<p><strong>Décès de l’homme qui connaissait le mec qui était le cousin du type qui était pote avec Jean Dujardin...</strong></h3>*/
 /* 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>*/
 /* 		</div>*/
-/* 		<div class="col-md-12 article-style-2">*/
+/* 		<div class="col-md-12 article-style-1">*/
 /* 			<p><strong>Un chaton aurait trouvé refuge dans la gorge du chanteur Garou depuis 1983...</strong></h3>*/
 /* 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>*/
 /* 		</div>*/
-/* 		<div class="col-md-12 article-style-2">*/
-/* 			<p><strong>Fabrice Luchini sombre dans la dépression après avoir commis une faute de liaison...</strong></h3>*/
+/* 		<div class="col-md-12 article-style-1">*/
+/* 			<p><strong>Éric et Ramzy forcés de re-tourner leur film après avoir oublié le cache de l’objectif sur la caméra</strong></h3>*/
 /* 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>*/
 /* 		</div>*/
-/* 		<div class="col-md-12 article-style-2">*/
-/* 			<p><strong>Kanye West frappe une jeune fan qui ne chante pas assez fort à son goût...</strong></h3>*/
+/* 		<div class="col-md-12 article-style-1">*/
+/* 			<p><strong>Fan de Star Wars, il dépense 200.000 euros pour ressembler à un sabre laser</strong></h3>*/
 /* 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>*/
 /* 		</div>*/
 /* 		*/

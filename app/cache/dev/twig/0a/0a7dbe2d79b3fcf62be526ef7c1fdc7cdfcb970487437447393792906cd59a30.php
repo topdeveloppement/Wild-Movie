@@ -21,20 +21,20 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_687b938864ed3f38a67382ec8d252f52724d272ab7e6b5121f880dda5503fc24 = $this->env->getExtension("native_profiler");
-        $__internal_687b938864ed3f38a67382ec8d252f52724d272ab7e6b5121f880dda5503fc24->enter($__internal_687b938864ed3f38a67382ec8d252f52724d272ab7e6b5121f880dda5503fc24_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontendBundle:Default:index.html.twig"));
+        $__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb = $this->env->getExtension("native_profiler");
+        $__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb->enter($__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontendBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_687b938864ed3f38a67382ec8d252f52724d272ab7e6b5121f880dda5503fc24->leave($__internal_687b938864ed3f38a67382ec8d252f52724d272ab7e6b5121f880dda5503fc24_prof);
+        $__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb->leave($__internal_488853d1a6f8262e1609dda7bcb0670aad21abbdbd67a783189781c814c641fb_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e22f33313fbc292dca3466d9d9b273414a93074b916f7d33355e4a5595473652 = $this->env->getExtension("native_profiler");
-        $__internal_e22f33313fbc292dca3466d9d9b273414a93074b916f7d33355e4a5595473652->enter($__internal_e22f33313fbc292dca3466d9d9b273414a93074b916f7d33355e4a5595473652_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a = $this->env->getExtension("native_profiler");
+        $__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a->enter($__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -79,44 +79,43 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 \t\t<h3>Les films à l'affiche !</h3>
 \t\t<hr>
 
-\t\t<div class=\"col-md-4\">
-\t\t\t<img class=\"card-img-top img-style-2\" src=\"";
+\t\t";
+        // line 40
+        $context["compteur"] = 0;
         // line 41
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/film1.jpg"), "html", null, true);
-        echo "\" alt=\"Card image cap\">
-\t\t</div>
-\t\t<div class=\"col-md-4\">
-\t\t\t<img class=\"card-img-top img-style-2\" src=\"";
-        // line 44
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/film2.jpg"), "html", null, true);
-        echo "\" alt=\"Card image cap\">
-\t\t</div>
-\t\t<div class=\"col-md-4\">
-\t\t\t<img class=\"card-img-top img-style-2\" src=\"";
-        // line 47
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/film3.jpg"), "html", null, true);
-        echo "\" alt=\"Card image cap\">
-\t\t</div>
-\t\t<div class=\"col-md-4\">
-\t\t\t<img class=\"card-img-top img-style-3\" src=\"";
-        // line 50
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/film4.jpg"), "html", null, true);
-        echo "\" alt=\"Card image cap\">
-\t\t</div>
-\t\t<div class=\"col-md-4\">
-\t\t\t<img class=\"card-img-top img-style-3\" src=\"";
-        // line 53
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/film5.jpg"), "html", null, true);
-        echo "\" alt=\"Card image cap\">
-\t\t</div>
-\t\t<div class=\"col-md-4\">
-\t\t\t<img class=\"card-img-top img-style-3\" src=\"";
-        // line 56
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/film6.jpg"), "html", null, true);
-        echo "\" alt=\"Card image cap\">
-\t\t</div>
-\t\t
-
+        echo "
+\t\t";
+        // line 42
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")));
+        foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
+            // line 43
+            echo "\t\t\t";
+            if (((isset($context["compteur"]) ? $context["compteur"] : $this->getContext($context, "compteur")) != 5)) {
+                // line 44
+                echo "\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t<a href=\"";
+                // line 45
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("film_show", array("id" => $this->getAttribute($context["movie"], "id", array()))), "html", null, true);
+                echo "\"><img class=\"card-img-top img-style-2\" src=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl((("uploads/film/" . $this->getAttribute($context["movie"], "folder", array())) . "")), "html", null, true);
+                echo "\" alt=\"film\">
+\t\t\t\t</div>
+\t\t\t\t";
+                // line 47
+                $context["compteur"] = ((isset($context["compteur"]) ? $context["compteur"] : $this->getContext($context, "compteur")) + 1);
+                // line 48
+                echo "\t\t\t";
+            }
+            // line 49
+            echo "
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 51
+        echo "
 \t</div>
 
 \t<div class=\"col-md-5\">
@@ -142,20 +141,9 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 \t\t
 \t</div>
 
-\t<div class=\"col-md-12 empty\"></div>
-\t<div class=\"ad-div col-md-10 col-md-offset-1\">
-\t\t<h2>Restez informé des prochaines sorties !</h2>
-\t</div>
-\t<div class=\"col-md-12 empty\"></div>
-
-\t<div class=\"col-md-10 col-md-offset-1 news-div\">
-\t\t<input class=\"news-input\" placeholder=\"Saisissez votre adresse E-Mail ...\" type=\"text\">
-\t\t<input class=\"btn btn-success news-input-2\" value=\"Envoyer !\" type=\"text\">
-\t</div>
-
 ";
         
-        $__internal_e22f33313fbc292dca3466d9d9b273414a93074b916f7d33355e4a5595473652->leave($__internal_e22f33313fbc292dca3466d9d9b273414a93074b916f7d33355e4a5595473652_prof);
+        $__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a->leave($__internal_9bea1699d52c91589593c8d3100f7a56b13616cdb6e43d0339e5c7adea710b4a_prof);
 
     }
 
@@ -171,7 +159,7 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 
     public function getDebugInfo()
     {
-        return array (  115 => 56,  109 => 53,  103 => 50,  97 => 47,  91 => 44,  85 => 41,  61 => 20,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  118 => 51,  111 => 49,  108 => 48,  106 => 47,  99 => 45,  96 => 44,  93 => 43,  89 => 42,  86 => 41,  84 => 40,  61 => 20,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
@@ -213,25 +201,17 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 /* 		<h3>Les films à l'affiche !</h3>*/
 /* 		<hr>*/
 /* */
-/* 		<div class="col-md-4">*/
-/* 			<img class="card-img-top img-style-2" src="{{ asset('img/film1.jpg') }}" alt="Card image cap">*/
-/* 		</div>*/
-/* 		<div class="col-md-4">*/
-/* 			<img class="card-img-top img-style-2" src="{{ asset('img/film2.jpg') }}" alt="Card image cap">*/
-/* 		</div>*/
-/* 		<div class="col-md-4">*/
-/* 			<img class="card-img-top img-style-2" src="{{ asset('img/film3.jpg') }}" alt="Card image cap">*/
-/* 		</div>*/
-/* 		<div class="col-md-4">*/
-/* 			<img class="card-img-top img-style-3" src="{{ asset('img/film4.jpg') }}" alt="Card image cap">*/
-/* 		</div>*/
-/* 		<div class="col-md-4">*/
-/* 			<img class="card-img-top img-style-3" src="{{ asset('img/film5.jpg') }}" alt="Card image cap">*/
-/* 		</div>*/
-/* 		<div class="col-md-4">*/
-/* 			<img class="card-img-top img-style-3" src="{{ asset('img/film6.jpg') }}" alt="Card image cap">*/
-/* 		</div>*/
-/* 		*/
+/* 		{% set compteur = 0 %}*/
+/* */
+/* 		{% for movie in movies %}*/
+/* 			{% if compteur != 5 %}*/
+/* 				<div class="col-md-4">*/
+/* 					<a href="{{ path('film_show', {'id': movie.id}) }}"><img class="card-img-top img-style-2" src="{{ asset('uploads/film/' ~ movie.folder ~ '') }}" alt="film">*/
+/* 				</div>*/
+/* 				{% set compteur = compteur + 1 %}*/
+/* 			{% endif %}*/
+/* */
+/* 		{% endfor %}*/
 /* */
 /* 	</div>*/
 /* */
@@ -256,17 +236,6 @@ class __TwigTemplate_95087a14a59350cdc3d68e3b9f8765cb11b5f1a1fe8a24e1fa3eb1b99ff
 /* 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>*/
 /* 		</div>*/
 /* 		*/
-/* 	</div>*/
-/* */
-/* 	<div class="col-md-12 empty"></div>*/
-/* 	<div class="ad-div col-md-10 col-md-offset-1">*/
-/* 		<h2>Restez informé des prochaines sorties !</h2>*/
-/* 	</div>*/
-/* 	<div class="col-md-12 empty"></div>*/
-/* */
-/* 	<div class="col-md-10 col-md-offset-1 news-div">*/
-/* 		<input class="news-input" placeholder="Saisissez votre adresse E-Mail ..." type="text">*/
-/* 		<input class="btn btn-success news-input-2" value="Envoyer !" type="text">*/
 /* 	</div>*/
 /* */
 /* {% endblock %}*/

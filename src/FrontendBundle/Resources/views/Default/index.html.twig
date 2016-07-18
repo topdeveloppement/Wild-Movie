@@ -37,25 +37,17 @@
 		<h3>Les films à l'affiche !</h3>
 		<hr>
 
-		<div class="col-md-4">
-			<img class="card-img-top img-style-2" src="{{ asset('img/film1.jpg') }}" alt="Card image cap">
-		</div>
-		<div class="col-md-4">
-			<img class="card-img-top img-style-2" src="{{ asset('img/film2.jpg') }}" alt="Card image cap">
-		</div>
-		<div class="col-md-4">
-			<img class="card-img-top img-style-2" src="{{ asset('img/film3.jpg') }}" alt="Card image cap">
-		</div>
-		<div class="col-md-4">
-			<img class="card-img-top img-style-3" src="{{ asset('img/film4.jpg') }}" alt="Card image cap">
-		</div>
-		<div class="col-md-4">
-			<img class="card-img-top img-style-3" src="{{ asset('img/film5.jpg') }}" alt="Card image cap">
-		</div>
-		<div class="col-md-4">
-			<img class="card-img-top img-style-3" src="{{ asset('img/film6.jpg') }}" alt="Card image cap">
-		</div>
-		
+		{% set compteur = 0 %}
+
+		{% for movie in movies %}
+			{% if compteur != 5 %}
+				<div class="col-md-4">
+					<a href="{{ path('film_show', {'id': movie.id}) }}"><img class="card-img-top img-style-2" src="{{ asset('uploads/film/' ~ movie.folder ~ '') }}" alt="film">
+				</div>
+				{% set compteur = compteur + 1 %}
+			{% endif %}
+
+		{% endfor %}
 
 	</div>
 
@@ -80,17 +72,6 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
 		</div>
 		
-	</div>
-
-	<div class="col-md-12 empty"></div>
-	<div class="ad-div col-md-10 col-md-offset-1">
-		<h2>Restez informé des prochaines sorties !</h2>
-	</div>
-	<div class="col-md-12 empty"></div>
-
-	<div class="col-md-10 col-md-offset-1 news-div">
-		<input class="news-input" placeholder="Saisissez votre adresse E-Mail ..." type="text">
-		<input class="btn btn-success news-input-2" value="Envoyer !" type="text">
 	</div>
 
 {% endblock %}

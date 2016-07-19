@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="row marg-row">
+	{% for film in film |reverse %}
+	<div class="col-lg-3">
+		<div class="panel panel-default bg-panel-mv">
+	    	<div class="panel-heading text-center title-com">
+	        	<h3 class="marg-row">{{ film.titre }}</h3>
+	    	</div>
+			<div class="panel-body">
+				<img style="max-width: 100%;" src="{{ asset('uploads/film/')}}{{ film.folder }}" alt="">
+			    <ul class="info-bull">
+			    <li>
+			        <div class="info-bull-panel bg-panel-wh">
+			            <div class="info-bull-body">
+			                <p>{{ film.description }}</p>
+			            </div>
+			            <div class="date-info">
+			            </div>
+			        </div>
+			    </li>
+			    </ul>
+			</div>
+			
+			<a href="{{ path('onefilm',{id: film.id}) }}">Voir les commentaires</a>
+			<a href="{{ path('filmpost') }}">Poster un Commentaires</a>
+			<br> 
+		</div> 
+	</div>
+	 {% endfor %}
+</div>	
+{% endblock body %}

@@ -1,10 +1,68 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
+<div class="row marg-row">
+	<div class="col-lg-8">
+		<div class="panel panel-default bg-panel-mv">
+	    	<div class="panel-heading text-center title-com">
+	        	<h3 class="marg-row">Titre du Film</h3>
+	    	</div>
+			<div class="panel-body">
+				<img style="display:block; margin: auto;" src="{{ asset('uploads/film/4c75a3dced149b3c4d0da8e345523032.jpeg') }}" alt="">
+			    <ul class="info-bull">
+			    <li>
+			        <div class="info-bull-panel bg-panel-wh">
+			            <div class="info-bull-body">
+			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eius ipsam eum rerum sint fugiat quisquam perferendis nostrum maiores in! Esse officiis unde pariatur, facere dolorem tempore obcaecati ea voluptatem.</p>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eius ipsam eum rerum sint fugiat quisquam perferendis nostrum maiores in! Esse officiis unde pariatur, facere dolorem tempore obcaecati ea voluptatem.</p>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eius ipsam eum rerum sint fugiat quisquam perferendis nostrum maiores in! Esse officiis unde pariatur, facere dolorem tempore obcaecati ea voluptatem.</p>
+			            </div>
+			            <div class="date-info">
+			            </div>
+			        </div>
+			    </li>
+			    </ul>
+			</div>
+		</div>  
+	</div>
+	<div class="col-lg-4">
+		<div class="card card-user">
+		    <div class="image">
+		        <img src="{{ asset('uploads/film/4c75a3dced149b3c4d0da8e345523032.jpeg') }}" alt="..."/>
+		    </div>
+		    <div class="content">
+		        <p class="description text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam recusandae, facere repudiandae quisquam, neque cupiditate, ipsa possimus earum praesentium saepe, culpa voluptas eum non expedita reiciendis assumenda alias totam voluptates.</p>
+		    </div>
+		    <hr>
+		    <div class="text-center wrap-btn">
+		        <button href="#" class="btn-lg btn btn-info" >Commenter</button>
+		    </div>  
+		</div>
+		<div class="card card-user">
+		    <div class="image">
+		        <img src="{{ asset('uploads/film/4c75a3dced149b3c4d0da8e345523032.jpeg') }}" alt="..."/>
+		    </div>
+		    <div class="content">
+		        <p class="description text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam recusandae, facere repudiandae quisquam, neque cupiditate, ipsa possimus earum praesentium saepe, culpa voluptas eum non expedita reiciendis assumenda alias totam voluptates.</p>
+		    </div>
+		    <hr>
+		    <div class="text-center wrap-btn">
+		        <button href="#" class="btn-lg btn btn-info" >Commenter</button>
+		    </div>  
+		</div>
+		<div class="card card-user">
+		    <div class="image">
+		        <img src="{{ asset('uploads/film/4c75a3dced149b3c4d0da8e345523032.jpeg') }}" alt="..."/>
+		    </div>
+		    <div class="content">
+		        <p class="description text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam recusandae, facere repudiandae quisquam, neque cupiditate, ipsa possimus earum praesentium saepe, culpa voluptas eum non expedita reiciendis assumenda alias totam voluptates.</p>
+		    </div>
+		    <hr>
+		    <div class="text-center wrap-btn">
+		        <button href="#" class="btn-lg btn btn-info" >Commenter</button>
+		    </div>  
+		</div>
 
-	<h2> Télécharge cette maquette et intégre ta page ici-même.
-	Le contenu est bien entendu fictif. Ne rentre pas un article en BDD, nous te demandons juste d'intégrer la page. (Le header et le footer sont déjà présent !!!)</h2>
-
-	<img src="{{ asset('img/image.png') }}">
-
+	</div>
+</div>
 {% endblock %}

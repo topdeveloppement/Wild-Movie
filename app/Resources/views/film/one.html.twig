@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="row marg-row">
+	<div class="col-lg-3">
+
+{{ form_start(form, {'method': 'post', 'action': path('filmpost')}) }}
+	{{ form_label(form.title) }}
+	{{ form_widget(form.title) }}
+	{{ form_label(form.post) }}
+	{{ form_widget(form.post) }}
+	{{ form_label(form.auteur) }}
+	{{ form_widget(form.auteur) }}
+	{{ form_widget(form.submit)}}
+{{ form_end(form) }}
+
+	</div>
+	<div class="col-lg-6">
+		<div class="panel panel-default bg-panel-mv">
+	    	<div class="panel-heading text-center title-com">
+	        	<h3 class="marg-row">{{ film.titre }}</h3>
+	    	</div>
+			<div class="panel-body">
+				<img style="max-width: 100%;" src="{{ asset('uploads/film/')}}{{ film.folder }}" alt="">
+			    <ul class="info-bull">
+			    <li>
+			        <div class="info-bull-panel bg-panel-wh">
+			            <div class="info-bull-body">
+			                <p>{{ film.description }}</p>
+			            </div>
+			            <div class="date-info">
+			            </div>
+			        </div>
+			    </li>
+			    </ul>
+			</div>
+		</div>  
+	</div>
+	<div class="col-lg-3">
+	
+	</div>
+</div>	
+{% endblock body %}
